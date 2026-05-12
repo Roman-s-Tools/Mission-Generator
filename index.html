@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Callout Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>🚨 Mission Callout Simulator</h1>
+        <p>
+          Generate emergency dispatch scenarios spanning aviation incidents,
+          SAR responses, disaster operations, and full CAP-style chaos.
+        </p>
+      </header>
+
+      <section class="controls card">
+        <label for="branch">Branch / Style</label>
+        <select id="branch" aria-label="Select branch style"></select>
+
+        <label for="mode">Scenario Category</label>
+        <select id="mode" aria-label="Select scenario category"></select>
+
+        <button id="generateBtn" type="button">🚨 Generate Mission</button>
+      </section>
+
+      <section id="missionCard" class="mission card hidden" aria-live="polite">
+        <h2 id="missionTitle">Mission Alert</h2>
+
+        <div class="mission-grid">
+          <p><span>Time:</span> <strong id="time"></strong></p>
+          <p><span>Mission Type:</span> <strong id="missionType"></strong></p>
+          <p><span>Location:</span> <strong id="location"></strong></p>
+          <p><span>Weather:</span> <strong id="weather"></strong></p>
+          <p><span>Assets Available:</span> <strong id="assets"></strong></p>
+          <p><span>Complication:</span> <strong id="complication"></strong></p>
+          <p><span>Additional Notes:</span> <strong id="notes"></strong></p>
+        </div>
+
+        <div>
+          <h3>Objectives</h3>
+          <ul id="objectives"></ul>
+        </div>
+
+        <p class="risk"><span>Risk Level:</span> <strong id="risk"></strong></p>
+      </section>
+
+      <section class="interactive card">
+        <h3>Command Decision</h3>
+        <p>
+          Choose your next action to get a simulator update for this incident.
+        </p>
+        <div class="action-buttons" id="actions"></div>
+        <p id="outcome" class="outcome"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
